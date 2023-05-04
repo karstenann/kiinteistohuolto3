@@ -110,7 +110,7 @@
                 <input name="salasana" type="password"  class="form-control" id="floatingPassword" placeholder="Password">
             </div>
         
-            <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Kirjaudu</button>
+            <button name="submit" class="w-100 btn btn-lg btn-primary mt-2" type="submit">Kirjaudu</button>
             <h6 class="mt-3">Jos sinulla ei ole käyttäjätunnusta  <a href="#">Luo tunnus</a></h6>
         </form>
     </main>
