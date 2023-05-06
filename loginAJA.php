@@ -1,4 +1,5 @@
 <?php require "conn.php"; ?>
+<?php include "testi.php"; ?>
 <?php
 
   if(isset($_POST['submit'])){
@@ -18,7 +19,9 @@
         if($login->rowCount() > 0){
 
             if($password = $data['customer_password']){
-              echo $data['customer_name'];
+              $_SESSION['sposti'] = $data['customer_email'];
+
+              header("location: viewAJA.php");
     
             }else{
               echo "Sähköposti tai salasana on väärin";
