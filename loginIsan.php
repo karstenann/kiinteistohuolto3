@@ -8,7 +8,7 @@
       $email = $_POST['sposti'];
       $password = $_POST['salasana'];
 
-      $sql = "SELECT * FROM customers WHERE customer_email = '$email'";
+      $sql = "SELECT * FROM kayttajat WHERE kayttaja_email = '$email'";
       $login = $conn->query($sql);
       $login->execute();
 
@@ -16,8 +16,8 @@
         
       if($login->rowCount() > 0){
 
-        if($password = $data['customer_password']){
-          echo $data['customer_name'];
+        if($password = $data['kayttaja_salasana']){
+          echo $data['kayttaja_nimi'];
 
         }else{
           echo "Sähköposti tai salasana on väärin";

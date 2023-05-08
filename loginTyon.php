@@ -8,17 +8,18 @@
       $email = $_POST['sposti'];
       $password = $_POST['salasana'];
 
-      $sql = "SELECT * FROM employees WHERE employee_email = '$email'";
+      $sql = "SELECT * FROM tyontekijat WHERE tyontekija_email = '$email'";
       $login = $conn->query($sql);
       $login->execute();
 
       $data = $login->fetch(PDO::FETCH_ASSOC);
 
-      if($data){
         if($login->rowCount() > 0){
 
-            if($password = $data['employee_password']){
-              echo $data['employee_name'];
+            if($password = $data['tyontekija_salasana']){
+              $_SESSION['sposti'] = $data['tyontekija_email'];
+
+              echo $data['tyontekija_nimi'];
     
             }else{
               echo "Sähköposti tai salasana on väärin";
@@ -26,27 +27,6 @@
         }else{
             echo "Sähköposti tai salasana on väärin";
         }
-      }else{
-        $email = $_POST['sposti'];
-        $password = $_POST['salasana'];
-
-        $sql = "SELECT * FROM supervisor WHERE supervisor_email = '$email'";
-        $login = $conn->query($sql);
-        $login->execute();
-
-        $data = $login->fetch(PDO::FETCH_ASSOC);
-        if($login->rowCount() > 0){
-
-            if($password = $data['supervisor_password']){
-              echo $data['supervisor_name'];
-    
-            }else{
-              echo "Sähköposti tai salasana on väärin";
-            }
-        }else{
-            echo "Sähköposti tai salasana on väärin";
-        }
-      }
     }
   }
 

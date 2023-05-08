@@ -9,17 +9,16 @@
       $email = $_POST['sposti'];
       $password = $_POST['salasana'];
 
-      $sql = "SELECT * FROM customers WHERE customer_email = '$email'";
+      $sql = "SELECT * FROM kayttajat WHERE kayttaja_email = '$email'";
       $login = $conn->query($sql);
       $login->execute();
 
       $data = $login->fetch(PDO::FETCH_ASSOC);
 
-      if($data){
         if($login->rowCount() > 0){
 
-            if($password = $data['customer_password']){
-              $_SESSION['sposti'] = $data['customer_email'];
+            if($password = $data['kayttaja_salasana']){
+              $_SESSION['sposti'] = $data['kayttaja_email'];
 
               header("location: viewAJA.php");
     
@@ -29,28 +28,7 @@
         }else{
             echo "Sähköposti tai salasana on väärin";
         }
-      }else{
-        $email = $_POST['sposti'];
-        $password = $_POST['salasana'];
-
-        $sql = "SELECT * FROM residents WHERE resident_email = '$email'";
-        $login = $conn->query($sql);
-        $login->execute();
-
-        $data = $login->fetch(PDO::FETCH_ASSOC);
-        if($login->rowCount() > 0){
-
-            if($password = $data['resident_password']){
-              echo $data['resident_name'];
-    
-            }else{
-              echo "Sähköposti tai salasana on väärin";
-            }
-        }else{
-            echo "Sähköposti tai salasana on väärin";
-        }
       }
-    }
   }
 
 ?>
