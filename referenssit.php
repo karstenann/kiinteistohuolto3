@@ -4,32 +4,11 @@
   <title>Kiinteistöhuolto R.Autio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-  /* .fakeimg {
-    height: 200px;
-    background: #aaa;
-  } */
-  .hana{
-    width: 300px;
-    height: 300px;
-  }
-  .tausta{
-    background-image: url(img/tausta1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin:20px 5px;
-  }
-
-  .otsikko{
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-  }
-  </style>
 </head>
 <body>
 

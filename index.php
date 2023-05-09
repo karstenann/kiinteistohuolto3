@@ -1,37 +1,18 @@
+<?php require "conn.php" ?>
+<?php require "testi.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Kiinteistöhuolto R.Autio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
-  .header {
-    background-image: url("img/talotausta.jpg");
-    background-size: 80% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .tausta{
-    background-image: url(img/tausta1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin:20px 5px;
-  }
 
-  .otsikko{
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-  }
-  </style>
 </head>
 <body>
 
@@ -41,31 +22,44 @@
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="../Kiinteistohuolto/index.html"></a>
+  <a class="navbar-brand" href="index.html"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="../Kiinteistohuolto R.Autio/referenssit.html">Referenssit</a>
+        <a class="nav-link" href="referenssit.html">Referenssit</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../Kiinteistohuolto R.Autio/tiedot.html">Yhteystiedot</a>
+        <a class="nav-link" href="tiedot.html">Yhteystiedot</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../Kiinteistohuolto R.Autio/lomake.html">Ota yhteyttä</a>
+        <a class="nav-link" href="lomake.html">Ota yhteyttä</a>
       </li>
+      <?php if(!isset($_SESSION['sposti'])): ?>
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
           Kirjaudu sisään
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Asukkaat ja asiakkaat</a>
-          <a class="dropdown-item" href="#">Isännöitsijät</a>
-          <a class="dropdown-item" href="#">Työntekijät</a>
+          <a class="dropdown-item" href="loginAJA.php">Asukkaat ja asiakkaat</a>
+          <a class="dropdown-item" href="loginIsan.php">Isännöitsijät</a>
+          <a class="dropdown-item" href="loginTyon.php">Työntekijät</a>
         </div>
-      </div>    
+      </div>
+      <?php else : ?>
+        <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          <?php echo $_SESSION['sposti']; ?>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="logout.php">Kirjaudu ulos</a>
+          <a class="dropdown-item" href="loginIsan.php">Isännöitsijät</a>
+          <a class="dropdown-item" href="loginTyon.php">Työntekijät</a>
+        </div>
+      </div>
+      <?php endif; ?>    
     </ul>
   </div>  
 </nav>
