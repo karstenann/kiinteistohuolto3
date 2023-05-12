@@ -14,21 +14,29 @@
       $login->execute();
 
       $data = $login->fetch(PDO::FETCH_ASSOC);
+      if($data){
+        if($data['rooli_id'] == 1){
+          if($login->rowCount() > 0){
 
-        if($login->rowCount() > 0){
+              if($password = $data['kayttaja_salasana']){
+                $_SESSION['kayttaja_nimi'] = $data['kayttaja_nimi'];
+                $_SESSION['kayttaja_id'] = $data['kayttaja_id'];
 
-            if($password = $data['kayttaja_salasana']){
-              $_SESSION['sposti'] = $data['kayttaja_nimi'];
-
-              header("location: index.php");
-    
-            }else{
+                header("location: index.php");
+      
+              }else{
+                echo "Sähköposti tai salasana on väärin";
+              }
+          }else{
               echo "Sähköposti tai salasana on väärin";
-            }
+          }
         }else{
-            echo "Sähköposti tai salasana on väärin";
+          echo "Sähköposti tai salasana on väärin";
         }
+      }else{
+        echo "Sähköposti tai salasana on väärin";
       }
+    }
   }
 
 ?>

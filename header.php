@@ -31,7 +31,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="referenssit.html">Referenssit</a>
+        <a class="nav-link" href="referenssit.php">Referenssit</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="tiedot.html">Yhteystiedot</a>
@@ -39,7 +39,7 @@
       <li class="nav-item">
         <a class="nav-link" href="lomake.html">Ota yhteyttä</a>
       </li>
-      <?php if(!isset($_SESSION['sposti']) & !isset($_SESSION['spostityon'])): ?>
+      <?php if(!isset($_SESSION['kayttaja_nimi']) & !isset($_SESSION['tyontekija_nimi'])): ?>
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
           Kirjaudu sisään
@@ -50,10 +50,10 @@
           <a class="dropdown-item" href="loginTyon.php">Työntekijät</a>
         </div>
       </div>
-      <?php elseif(isset($_SESSION['spostityon'])) : ?>
+      <?php elseif(isset($_SESSION['tyontekija_nimi'])) : ?>
         <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-          <?php echo $_SESSION['spostityon']; ?>
+          <?php echo $_SESSION['tyontekija_nimi']; ?>
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="logout.php">Kirjaudu ulos</a>
@@ -64,12 +64,11 @@
       <?php else : ?>
         <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-          <?php echo $_SESSION['sposti']; ?>
+          <?php echo $_SESSION['kayttaja_nimi']; ?>
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="logout.php">Kirjaudu ulos</a>
-          <a class="dropdown-item" href="#">Omat tiedot</a>
-          <a class="dropdown-item" href="#">Täältä voit valittaa</a>
+          <a class="dropdown-item" href="nakymat/nakyma.php">Tee vikailmoitus</a>
         </div>
       </div>
       <?php endif; ?>    

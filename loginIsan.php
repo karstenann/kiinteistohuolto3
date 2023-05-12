@@ -14,14 +14,22 @@
       $login->execute();
 
       $data = $login->fetch(PDO::FETCH_ASSOC);
-        
-      if($login->rowCount() > 0){
+      if($data){
+        if($data['rooli_id'] == 2){
+          if($login->rowCount() > 0){
 
-        if($password = $data['kayttaja_salasana']){
-          $_SESSION['sposti'] = $data['kayttaja_nimi'];
+            if($password = $data['kayttaja_salasana']){
+              $_SESSION['kayttaja_nimi'] = $data['kayttaja_nimi'];
+              $_SESSION['kayttaja_id'] = $data['kayttaja_id'];
 
-          header("location: index.php");
+              header("location: index.php");
 
+            }else{
+              echo "Sähköposti tai salasana on väärin";
+            }
+          }else{
+            echo "Sähköposti tai salasana on väärin";
+          }
         }else{
           echo "Sähköposti tai salasana on väärin";
         }
@@ -47,7 +55,6 @@
             </div>
         
             <button name="submit" class="w-100 btn btn-lg btn-primary mt-2" type="submit">Kirjaudu</button>
-            <h6 class="mt-3">Jos sinulla ei ole käyttäjätunnusta  <a href="#">Luo tunnus</a></h6>
         </form>
     </main>
 
