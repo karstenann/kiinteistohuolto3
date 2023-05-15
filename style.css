@@ -1,0 +1,33 @@
+
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+
+.mapstyle {
+    width: 500px;
+    height: 250px;
+}
+
+.tausta{
+    background-image: url(img/tausta1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin:20px 5px;
+}
+
+.otsikko{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.hana{
+    width: 300px;
+    height: 300px;
+}
+
+.refekuvat {
+    width: 300px;
+    height: 200px;
+}
