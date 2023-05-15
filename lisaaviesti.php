@@ -1,6 +1,6 @@
 <?php
 
-require "connect.php";
+require "conn.php";
 
 if(isset($_POST['submit'])){
     $nimi = $_POST['name'];

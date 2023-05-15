@@ -2,7 +2,7 @@
 
 header("Access-Control-Allow-Origin: *");
 
-include ('connect.php');
+include ('conn.php');
 
 $kysely = "SELECT yht_nimi, yht_email, yht_puhelin, yht_viesti, yht_pvm FROM yhtotot ORDER BY yht_pvm";
 $data = $yhteys->query($kysely);

@@ -1,6 +1,6 @@
 <?php require "includes/header.php"; ?>
 
-<?php require "connect.php"; ?>
+<?php require "conn.php"; ?>
 
 
 <main class="form-signin w-50 m-auto">
