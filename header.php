@@ -42,9 +42,9 @@ session_start();
           Kirjaudu sisään
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Asukkaat ja asiakkaat</a>
-          <a class="dropdown-item" href="#">Isännöitsijät</a>
-          <a class="dropdown-item" href="#">Työntekijät</a>
+          <a class="dropdown-item" href="../kiinteistohuolto3/loginAJA.php">Asukkaat ja asiakkaat</a>
+          <a class="dropdown-item" href="../kiinteistohuolto3/loginISAN.php">Isännöitsijät</a>
+          <a class="dropdown-item" href="../kiinteistohuolto3/loginTyon.php">Työntekijät</a>
         </div>
       </div>    
     </ul>
