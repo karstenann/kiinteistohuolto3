@@ -1,4 +1,4 @@
-<?php require "includes/header.php"; ?>
+<?php require "header.php"; ?>
 
 <?php require "conn.php"; ?>
 
@@ -37,4 +37,4 @@
   <br><br><br>
 </main>
 
-<?php require "includes/footer.php"; ?>
+<?php require "footer.php"; ?>
