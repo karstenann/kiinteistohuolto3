@@ -22,20 +22,20 @@ session_start();
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="../Kiinteistohuolto R.Autio/index.php">Etusivu</a>
+  <a class="navbar-brand" href="../kiinteistohuolto3/index.php">Etusivu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="../Kiinteistohuolto R.Autio/referenssit.php">Referenssit</a>
+        <a class="nav-link" href="../kiinteistohuolto3/referenssit.php">Referenssit</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../Kiinteistohuolto R.Autio/tiedot.php">Yhteystiedot</a>
+        <a class="nav-link" href="../kiinteistohuolto3/tiedot.php">Yhteystiedot</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../Kiinteistohuolto R.Autio/lomake.php">Ota yhteyttä</a>
+        <a class="nav-link" href="../kiinteistohuolto3/lomake.php">Ota yhteyttä</a>
       </li>
       <div class="dropdown">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
