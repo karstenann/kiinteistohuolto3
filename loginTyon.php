@@ -68,7 +68,7 @@
             
             <div class="form-floating">
                 <label for="floatingPassword">Salasana</label>
-                <input name="salasana" type="password"  class="form-control" id="floatingPassword" placeholder="Password">
+                <input name="salasana" type="password"  class="form-control mb-2" id="floatingPassword" placeholder="Password">
             </div>
         
             <button name="submit" class="w-100 btn btn-lg btn-primary mb-2" type="submit">Kirjaudu</button>

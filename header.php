@@ -34,10 +34,10 @@
         <a class="nav-link" href="referenssit.php">Referenssit</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="tiedot.html">Yhteystiedot</a>
+        <a class="nav-link" href="tiedot.php">Yhteystiedot</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="lomake.html">Ota yhteyttä</a>
+        <a class="nav-link" href="lomake.php">Ota yhteyttä</a>
       </li>
       <?php if(!isset($_SESSION['kayttaja_nimi']) & !isset($_SESSION['tyontekija_nimi'])): ?>
       <div class="dropdown">
@@ -58,7 +58,7 @@
         <div class="dropdown-menu">
           <a class="dropdown-item" href="logout.php">Kirjaudu ulos</a>
           <a class="dropdown-item" href="#">Omat tiedot</a>
-          <a class="dropdown-item" href="nakymat/VIKAindex.php">Katso valituksia</a>
+          <a class="dropdown-item" href="nakymat/VIKAindex.php">Katso ilmoituksia</a>
         </div>
       </div>
       <?php else : ?>

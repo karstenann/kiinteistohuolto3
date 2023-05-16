@@ -34,7 +34,7 @@
                 <tbody>
                     <?php
                         while ($rivi = $hae->fetch(PDO::FETCH_ASSOC)) {
-                            if($rivi['v_status'] = "avoin") ?>
+                            if($rivi['vstatus_id'] == 1){ ?>
                     <tr>
                         <td><?php echo $rivi['ilmoitus']; ?></td>
                         <td><?php echo $rivi['vika_pvm']; ?></td>   
@@ -44,7 +44,8 @@
                         <td><?php echo $rivi['taloyhtio_nimi']; ?></td>
                         <td><?php echo '<a href="tehtava.php?vika_id='.$rivi['vika_id'].'" class="btn btn-primary">Määrää tehtävä</a>'; ?></td>
                     </tr>
-                    <?php } ?>
+                    <?php }else{}
+                } ?>
                 </tbody>
             </table>
         </div>
