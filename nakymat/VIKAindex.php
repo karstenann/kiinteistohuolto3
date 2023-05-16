@@ -1,5 +1,5 @@
 <?php 
-    require "../kiinteistohuolto3/header.php";
+    require "../header.php";
     
     
         $kysely = "SELECT *
@@ -49,4 +49,4 @@
                 </tbody>
             </table>
         </div>
-<?php require "../kiinteistohuolto3/footer.php"; ?>
+<?php require "../footer.php"; ?>

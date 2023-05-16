@@ -54,7 +54,7 @@
                 <input name="salasana" type="password"  class="form-control" id="floatingPassword" placeholder="Password">
             </div>
         
-            <button name="submit" class="w-100 btn btn-lg btn-primary mt-2" type="submit">Kirjaudu</button>
+            <button name="submit" class="w-100 btn btn-lg btn-primary mt-2 mb-2" type="submit">Kirjaudu</button>
         </form>
     </main>
 

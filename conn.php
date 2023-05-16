@@ -2,7 +2,7 @@
 
 try{
     $servername = "localhost";
-    $database = "khuoltodb";
+    $database = "kiinteistohuoltodb";
     $tunnus = "root";
     $salis = "";
 
