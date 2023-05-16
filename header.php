@@ -24,7 +24,7 @@
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="index.html"></a>
+  <a class="navbar-brand" href="index.php">Etusivu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -34,10 +34,10 @@
         <a class="nav-link" href="referenssit.php">Referenssit</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="tiedot.html">Yhteystiedot</a>
+        <a class="nav-link" href="tiedot.php">Yhteystiedot</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="lomake.html">Ota yhteyttä</a>
+        <a class="nav-link" href="lomake.php">Ota yhteyttä</a>
       </li>
       <?php if(!isset($_SESSION['kayttaja_nimi']) & !isset($_SESSION['tyontekija_nimi'])): ?>
       <div class="dropdown">
