@@ -1,5 +1,6 @@
 <?php 
     require "../header.php";
+    require "../conn.php";
     header("Access-Control-Allow-Origin: *");
     
     
