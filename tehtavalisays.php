@@ -17,13 +17,13 @@
 
         $tyontekijat_kysely = "UPDATE tyontekijat SET tstatus_id = :tstatus_id WHERE tyontekija_id = :tyontekija_id";
         $tyontekijat_paivita = $conn->prepare($tyontekijat_kysely);
-        $tyontekijat_paivita->bindValue(':tstatus_id', 2, PDO::PARAM_INT); // Replace $tstatus_id with the actual foreign key value
+        $tyontekijat_paivita->bindValue(':tstatus_id', 2, PDO::PARAM_INT);
         $tyontekijat_paivita->bindValue(':tyontekija_id', $tyontekija, PDO::PARAM_INT);
         $tyontekijat_paivita->execute();
 
         $vikailm_kysely = "UPDATE vikailm SET vstatus_id = :vstatus_id WHERE vika_id = :vika_id";
         $vikailm_paivita = $conn->prepare($vikailm_kysely);
-        $vikailm_paivita->bindValue(':vstatus_id', 2, PDO::PARAM_INT); // Replace $vstatus_id with the actual foreign key value
+        $vikailm_paivita->bindValue(':vstatus_id', 2, PDO::PARAM_INT);
         $vikailm_paivita->bindValue(':vika_id', $vikaid, PDO::PARAM_INT);
         $vikailm_paivita->execute();
 

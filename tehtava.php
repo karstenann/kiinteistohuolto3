@@ -51,11 +51,14 @@
                         <td><?php echo $rivi['taloyhtio_nimi']; ?></td>
                         <td>
                             <select name="tyontekija_id">
-                            <?php foreach ($tyontekijat as $tyontekija) { ?>
+                            <?php foreach ($tyontekijat as $tyontekija) {
+                                if($tyontekija['tstatus_id'] == 1){ ?>
                                 <option value="<?php echo $tyontekija['tyontekija_id']; ?>">
                                     <?php echo $tyontekija['tyontekija_nimi']; ?>
                                 </option>
-                            <?php } ?>
+                                <?php }else{
+
+                                } ?>
                             </select>
                         </td>
                         <td><?php echo '<a href="tehtavalisays.php?vika_id='.$rivi['vika_id'].'
@@ -64,6 +67,7 @@
                                         &tstatus='.$tyontekija['tstatus_id'].'" 
                                         class="btn btn-primary">Valitse</a>'; ?></td>
                     </tr>
+                    <?php } ?>
                     <?php }else{
 
                     }
