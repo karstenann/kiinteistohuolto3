@@ -10,11 +10,13 @@
    
     <div class="col-sm-7">
       <h2>Tietoa meistä</h2>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p> Olemme palvelleet asiakkaitamme jo vuodesta 2023 lähtien.
+          Pyrimme yksilölliseen ja joustavaan palveluun kunkin taloyhtiön tarpeisiin mukautuen.
+          Olemme Isännöintiliiton jäsenyritys.</p>
       <div class="fakeimg">joku kuva</div>
       <br>
       <h2>Palvelumme</h2>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>Isännöintipalvelut</p>
       <div class="fakeimg">joku kuva</div>  
     </div>
     <div class="col-sm-5">
