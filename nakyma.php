@@ -1,6 +1,6 @@
 <?php 
-    require "../header.php";
-    require "../conn.php";
+    require "header.php";
+    require "conn.php";
     header("Access-Control-Allow-Origin: *");
     
     
@@ -38,4 +38,4 @@
                 </tbody>
             </table>
         </div>
-<?php require "../footer.php"; ?>
+<?php require "footer.php"; ?>

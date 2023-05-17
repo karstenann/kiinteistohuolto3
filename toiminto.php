@@ -1,5 +1,5 @@
 <?php 
-    require "../header.php";
+    require "header.php";
     
 ?>
 
@@ -28,3 +28,5 @@
      </div>
     </body>
 </html>
+
+<?php require "footer.php"; ?>
