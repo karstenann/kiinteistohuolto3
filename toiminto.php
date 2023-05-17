@@ -1,5 +1,5 @@
 <?php 
-    require "../kiinteistohuolto3/header.php";
+    require "../header.php";
     
 ?>
 
