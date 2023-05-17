@@ -3,7 +3,12 @@
     height: 200px;
     background: #aaa;
 }
-
+.backtiles{
+    background-image: url(img/tiilitausta.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 .mapstyle {
     width: 500px;
     height: 250px;
@@ -11,8 +16,7 @@
 
 .tausta{
     background-image: url(img/tausta1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-repeat:repeat;
     background-size: cover;
 }
 
@@ -21,12 +25,25 @@
     text-shadow: 2px 2px 4px #000000;
 }
 
-.hana{
-    width: 300px;
-    height: 300px;
+.huolto{
+    width: 250px;
+    height: 150px;
+}
+.isannointi{
+    width: 330px;
+    height: 210px;
+}
+.pensas{
+    width: 250px;
+    height: 150px;
 }
 
 .refekuvat {
     width: 300px;
     height: 200px;
+}
+.tavut{
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
