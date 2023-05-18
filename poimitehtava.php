@@ -67,40 +67,10 @@
                         <td><?php echo $rivi['kayttaja_osoite']; ?></td>
                         <td><?php echo $rivi['taloyhtio_nimi']; ?></td>
                         <td>
-                            <textarea name="korjaus[<?php echo $rivi['vika_id']; ?>]"></textarea><br>
-                            <input type="hidden" name="vika_id[]" value="<?php echo $rivi['vika_id']; ?>">
+                            <form action="paivita.php" method="get">
+                                <input name="korjaus" type="text">
+                            </form>
                         </td>
-                        
-                        <?php 
-                        if (isset($_POST['korjaus'])) {
-                            $korjaus = $_POST['korjaus'];
-                            $vika_ids = $_POST['vika_id'];
-                            foreach ($korjaus as $key => $text) {
-                                // Update task in the first two tables
-                                // $vstatus_id = $key;
-                                // $kysely = "SELECT v_status FROM vikastatus WHERE vstatus_id = $vstatus_id";
-                                $vika_id = $vika_ids[$key];
-                                // $kysely = "SELECT v_status FROM vikastatus WHERE vstatus_id = $vstatus_id";
-                                $kysely = "UPDATE vikailm SET korjaus = $text, vstatus_id = 'valmis' WHERE vika_id = $vika_id";
-                                $data = $conn->query($kysely);
-                                $rivi = $data->fetch(PDO::FETCH_ASSOC);
-                                $status = $rivi['v_status'];
-                                echo $vstatus_id;
-                                // Update status in the third table
-                                if ($status == 'työn alla') {
-                                    $kysely = "UPDATE vikailm SET korjaus = $text, vstatus_id = 'valmis' WHERE vika_id = $vika_id";
-                                    $data = $conn->query($kysely);
-                                    $kysely = "UPDATE vikailm SET vstatus_id = 'valmis' WHERE vstatus_id = $vstatus_id";
-                                    $data = $conn->query($kysely);
-
-                                }
-                                // $kysely = "UPDATE vikastatus SET v_status = 'valmis' WHERE vstatus_id = $vstatus_id";
-                                // $data = $conn->query($kysely);
-                            }
-                        }
-                        
-                        ?>
-                        <td><input type="submit" value="Päivitä"></td>
                         
                     </tr>
                   

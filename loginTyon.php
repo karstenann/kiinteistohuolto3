@@ -9,7 +9,7 @@
       $email = $_POST['spostityon'];
       $password = $_POST['salasana'];
 
-      $sql = "SELECT * FROM tyontekijat WHERE tyontekija_email = '$email'";
+      $sql = "SELECT * FROM tyontekijat WHERE tyontekija_email = '$email' AND tyontekija_salasana = '$password'";
       $login = $conn->query($sql);
       $login->execute();
 
