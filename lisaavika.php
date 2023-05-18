@@ -1,6 +1,6 @@
 <?php 
 
-require "../conn.php";
+require "conn.php";
 include "nakyma.php";
 
 if(isset($_POST["talleta"])){

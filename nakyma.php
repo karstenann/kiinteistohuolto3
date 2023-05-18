@@ -1,6 +1,6 @@
 <?php 
-    require "../header.php";
-    require "../conn.php";
+    require "header.php";
+    require "conn.php";
     header("Access-Control-Allow-Origin: *");
     
     
@@ -15,13 +15,9 @@
 
         <div class="container mt-5">
             <form class="form-inline" method="POST" action="toiminto.php">
-                <div class="form-group mx-sm-3 mb-2">
-                    <!-- <label for="inputPassword2" class="sr-only"></label>
-                    <input type="text" name="muntaski" class="form-control" id="inputPassword2" placeholder="vikailmoituksen kuvaus"> -->
-                </div>
                 <button name="laheta" type="submit" class="btn btn-primary mb-2" href="toiminto.php">Jätä vikailmoitus</button>
             </form>
-            <table class="table">
+            <table class="table mb-5">
                 <thead>
                     <tr>
                         <th>Tehtävän nimi</th>
@@ -38,4 +34,4 @@
                 </tbody>
             </table>
         </div>
-<?php require "../footer.php"; ?>
+<?php require "footer.php"; ?>

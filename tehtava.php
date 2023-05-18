@@ -1,6 +1,6 @@
 <?php
 
-    require "../header.php";
+    require "header.php";
 
     if(isset($_GET['vika_id'])){
 
@@ -75,4 +75,4 @@
                 </tbody>
             </table>
         </div>
-<?php require "../footer.php"; ?>
+<?php require "footer.php"; ?>

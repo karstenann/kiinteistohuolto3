@@ -1,6 +1,6 @@
 <?php
 
-    require "../conn.php";
+    require "conn.php";
     include "tehtava.php";
 
     if(isset($_GET['vika_id']) && isset($_GET['tyontekija_id'])){

@@ -1,0 +1,54 @@
+<?php 
+    require "header.php";
+    
+    
+        $kysely = "SELECT *
+        FROM vikailm
+        CROSS JOIN vikastatus
+        CROSS JOIN kayttajat
+        CROSS JOIN taloyhtiot
+        CROSS JOIN tyontekijat
+        WHERE vikailm.vstatus_id = vikastatus.vstatus_id 
+        AND kayttajat.kayttaja_id = vikailm.kayttaja_id
+        AND kayttajat.taloyhtio_id = taloyhtiot.taloyhtio_id
+        AND tyontekijat.tyontekija_id = :tyontekija_id";
+
+        $hae = $conn->prepare($kysely);
+        $hae ->bindValue(":tyontekija_id", $_SESSION['tyontekija_id']);
+        $hae->execute();
+        
+
+?>
+
+        <div class="container mt-5">
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Ilmoitus</th>
+                        <th>PVM</th>
+                        <th>Status</th>
+                        <th>Käyttaja</th>
+                        <th>Osoite</th>
+                        <th>Taloyhtiön nimi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        while ($rivi = $hae->fetch(PDO::FETCH_ASSOC)) {
+                            if($rivi['vstatus_id'] == 1){ ?>
+                    <tr>
+                        <td><?php echo $rivi['ilmoitus']; ?></td>
+                        <td><?php echo $rivi['vika_pvm']; ?></td>   
+                        <td><?php echo $rivi['v_status']; ?></td>
+                        <td><?php echo $rivi['kayttaja_nimi']; ?></td>
+                        <td><?php echo $rivi['kayttaja_osoite']; ?></td>
+                        <td><?php echo $rivi['taloyhtio_nimi']; ?></td>
+                        <td><?php echo '<a href="poimitehtava.php?vika_id='.$rivi['vika_id'].'&tyontekija_id='.$rivi['tyontekija_id'].'" class="btn btn-primary">Poimi tehtävä</a>'; ?></td>
+                    </tr>
+                    <?php }else{}
+                } ?>
+                </tbody>
+            </table>
+        </div>
+<?php require "footer.php"; ?>

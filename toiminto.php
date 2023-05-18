@@ -1,5 +1,5 @@
 <?php 
-    require "../kiinteistohuolto3/header.php";
+    require "header.php";
     
 ?>
 
@@ -10,7 +10,7 @@
         <title>Vikailmoitus</title>
     </head>
     <body>
-     <div class="container">
+     <div class="container mt-5">
         <h1>Vikailmoitus</h1>
         <!-- <a href="index.php">Takaisin listaan</a> -->
         <h3>Lisää uusi vikailmoitus</h3>
@@ -21,7 +21,7 @@
                     <td><input type="text" size="150" name="ilmoitus" required></td>
                 </tr>
                 <tr>
-                    <td><button name="talleta" type="submit" class="btn btn-primary">Talleta</button></td>
+                    <td><button name="talleta" type="submit" class="btn btn-primary mt-2">Lähetä</button></td>
                 </tr>
             </form>
         </table>
