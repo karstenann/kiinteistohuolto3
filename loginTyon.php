@@ -21,6 +21,7 @@
             if($password = $data['tyontekija_salasana']){
               $_SESSION['tyontekija_nimi'] = $data['tyontekija_nimi'];
               $_SESSION['rooli_id'] = $data['rooli_id'];
+              $_SESSION['tyontekija_id'] = $data['tyontekija_id'];
 
               header("location: index.php");
         
@@ -37,6 +38,7 @@
               if($password = $data['tyontekija_salasana']){
                 $_SESSION['tyontekija_nimi'] = $data['tyontekija_nimi'];
                 $_SESSION['rooli_id'] = $data['rooli_id'];
+                $_SESSION['tyontekija_id'] = $data['tyontekija_id'];
 
                 header("location: index.php");
           

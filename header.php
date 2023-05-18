@@ -57,7 +57,7 @@
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="logout.php">Kirjaudu ulos</a>
-          <a class="dropdown-item" href="#">Omat tiedot</a>
+          <a class="dropdown-item" href="VIKAtyon.php">Katso vapaita tehtäviä</a>
           <a class="dropdown-item" href="VIKAindex.php">Katso ilmoituksia</a>
         </div>
       </div>
