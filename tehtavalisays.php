@@ -33,3 +33,5 @@
     header("location: VIKAindex.php");
 
 ?>
+
+<?php require "footer.php"; ?>
