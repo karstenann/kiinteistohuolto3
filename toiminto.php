@@ -15,7 +15,7 @@
         <!-- <a href="index.php">Takaisin listaan</a> -->
         <h3>Lisää uusi vikailmoitus</h3>
         <table class="table-bordered">
-            <form action="lisaaVika.php" method="POST">
+            <form action="lisaavika.php" method="POST">
                 <tr>
                     <td>Vika</td>
                     <td><input type="text" size="150" name="ilmoitus" required></td>

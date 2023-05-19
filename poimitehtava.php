@@ -59,25 +59,20 @@
                     <?php
                         while ($rivi = $hae->fetch(PDO::FETCH_ASSOC)) {
                             if($rivi['v_status'] = "työn alla") { ?>
-                    <form action="paivita.php" method="get">
-                        <tr>
-                            <td><?php echo $rivi['ilmoitus']; ?></td>
-                            <td><?php echo $rivi['vika_pvm']; ?></td>   
-                            <td><?php echo $rivi['v_status']; ?></td>
-                            <td><?php echo $rivi['kayttaja_nimi']; ?></td>
-                            <td><?php echo $rivi['kayttaja_osoite']; ?></td>
-                            <td><?php echo $rivi['taloyhtio_nimi']; ?></td>
-                            <td>
-                                <textarea name="korjaus" id="korjaus" cols="30" rows="2"></textarea>
-                            </td>
-                            <td>
-                                <input type="submit" value="Tallenna">
-                                <input type="hidden" name="vika_id" value="<?php echo $vikaid; ?>">
-                                <input type="hidden" name="tyontekija_id" value="<?php echo $tyontekija; ?>">
-                            </td>
+                    <tr>
+                        <td><?php echo $rivi['ilmoitus']; ?></td>
+                        <td><?php echo $rivi['vika_pvm']; ?></td>   
+                        <td><?php echo $rivi['v_status']; ?></td>
+                        <td><?php echo $rivi['kayttaja_nimi']; ?></td>
+                        <td><?php echo $rivi['kayttaja_osoite']; ?></td>
+                        <td><?php echo $rivi['taloyhtio_nimi']; ?></td>
+                        <td>
+                            <form action="paivita.php" method="get">
+                                <input name="korjaus" type="text">
+                            </form>
+                        </td>
                         
-                        </tr>
-                    </form>
+                    </tr>
                   
                     <?php }else{
 
