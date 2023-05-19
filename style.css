@@ -1,49 +1,43 @@
 
 .fakeimg {
-    height: 200px;
-    background: #aaa;
-}
-.backtiles{
-    background-image: url(img/tiilitausta.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    height: 200px !important;
+    background: #aaa !important;
 }
 .mapstyle {
-    width: 500px;
-    height: 250px;
+    width: 500px !important;
+    height: 250px !important;
 }
 
 .tausta{
-    background-image: url(img/tausta1.jpg);
-    background-repeat:repeat;
-    background-size: cover;
+    background-image: url(img/tausta1.jpg) !important;
+    background-repeat:repeat !important;
+    background-size: cover !important;
 }
 
 .otsikko{
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+    color: white !important;
+    text-shadow: 2px 2px 4px #000000 !important;
 }
 
 .huolto{
-    width: 250px;
-    height: 150px;
+    width: 250px !important;
+    height: 150px !important;
 }
 .isannointi{
-    width: 330px;
-    height: 210px;
+    width: 330px !important;
+    height: 210px !important;
 }
 .pensas{
-    width: 250px;
-    height: 150px;
+    width: 250px !important;
+    height: 150px !important;
 }
 
 .refekuvat {
-    width: 300px;
-    height: 200px;
+    width: 300px !important;
+    height: 200px !important;
 }
 .tavut{
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: auto !important;
+    -ms-hyphens: auto !important;
+    hyphens: auto !important;
 }
